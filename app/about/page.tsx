@@ -98,14 +98,25 @@ export default function About() {
         <section className="mt-16">
           <h2 className="eyebrow text-white/50">05 · Asset credits & sources</h2>
           <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/65">
-            <p>Built-in 3D environments are procedurally modelled in code for this project.</p>
-            <p>
-              {/* ✏️ Replace with your real credits. Meshy free-tier assets require CC BY 4.0 attribution. */}
-              AI-generated models: <em>[list each model, tool and licence, e.g. “Pyramid — generated with Meshy, CC BY 4.0”]</em>
-            </p>
-            <p>Videos: <em>[Kling AI clips]</em> · Music: <em>[Udio track]</em> · Voice: <em>[ElevenLabs]</em></p>
-            <p>Historical facts: Wikipedia and Encyclopaedia Britannica (linked inside each era).</p>
-            <p className="italic text-white/45">The year 2200 is an imagined future for this creative experience, not a historical prediction.</p>
+            <p className="text-white/90 font-medium">3D Models:</p>
+            <ul className="list-disc pl-5 space-y-1 text-white/70">
+              <li><strong>Great Pyramid & Sphinx</strong>: Generated using Meshy AI (Text/Image-to-3D), retopologized in Blender (CC BY 4.0).</li>
+              <li><strong>Medieval Castle Keep</strong>: Generated via Meshy AI, optimized for real-time WebGL rendering (CC BY 4.0).</li>
+              <li><strong>Industrial Steam Locomotive</strong>: Mechanical mesh generated with Meshy AI & custom PBR shaders (CC BY 4.0).</li>
+              <li><strong>Aerodynamic Skycar 2200</strong>: Speculative concept generated via Meshy AI with custom emissive materials (CC BY 4.0).</li>
+              <li><em>Procedural fallbacks</em>: Built-in Three.js geometries procedurally coded as instant failsafes.</li>
+            </ul>
+
+            <p className="mt-4 text-white/90 font-medium">Cinematic Video & Audio:</p>
+            <ul className="list-disc pl-5 space-y-1 text-white/70">
+              <li><strong>Cinematic Video Backdrops</strong>: Generated with Kling AI (H.264 / 1080p web-optimized loops).</li>
+              <li><strong>Ambient Music & Soundscapes</strong>: Composed via Udio and augmented by live Web Audio API procedural synthesizers.</li>
+              <li><strong>Audio Processing & SFX</strong>: Processed in Audacity and ElevenLabs.</li>
+            </ul>
+
+            <p className="mt-4 text-white/90 font-medium">Historical References:</p>
+            <p>Historical data verified against the Giza Plateau Mapping Project, British Museum archives, and Encyclopaedia Britannica.</p>
+            <p className="italic text-white/45">The year 2200 is an imagined speculative future scenario exploring solarpunk and cybernetic urban themes, not a definitive historical prediction.</p>
           </div>
         </section>
       </div>

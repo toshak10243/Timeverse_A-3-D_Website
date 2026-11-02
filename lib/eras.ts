@@ -83,7 +83,7 @@ export const ERAS: Era[] = [
         ],
         focusY: 5,
         offset: [18, 8, 22],
-        // modelUrl: '/models/pyramid.glb',
+        modelUrl: '/models/pyramid.glb',
         modelFit: 20,
       },
       {
@@ -99,7 +99,7 @@ export const ERAS: Era[] = [
         ],
         focusY: 2.5,
         offset: [9, 4, 9],
-        // modelUrl: '/models/sphinx.glb',
+        modelUrl: '/models/sphinx.glb',
         modelFit: 9,
       },
       {
@@ -158,7 +158,7 @@ export const ERAS: Era[] = [
         ],
         focusY: 6,
         offset: [-20, 10, 26],
-        // modelUrl: '/models/castle.glb',
+        modelUrl: '/models/castle.glb',
         modelFit: 26,
       },
       {
@@ -233,7 +233,7 @@ export const ERAS: Era[] = [
         ],
         focusY: 2,
         offset: [6, 4, 8],
-        // modelUrl: '/models/locomotive.glb',
+        modelUrl: '/models/steam-train.glb',
         modelFit: 7,
       },
       {
@@ -325,7 +325,7 @@ export const ERAS: Era[] = [
         ],
         focusY: 0.5,
         offset: [7, 3, 9],
-        // modelUrl: '/models/skycar.glb',
+        modelUrl: '/models/futuristic-car.glb',
         modelFit: 4,
       },
       {
