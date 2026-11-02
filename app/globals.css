@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Manrope:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #5ee7ff;
+  --bg: #06070b;
+}
+html, body { background: var(--bg); color: #ece8df; min-height: 100%; }
+body { font-family: 'Manrope', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: var(--accent); color: #000; }
+
+.glass {
+  background: rgba(8, 10, 16, 0.58);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+.text-accent { color: var(--accent); }
+.bg-accent { background: var(--accent); }
+.border-accent { border-color: var(--accent); }
+.eyebrow { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; }
+
+.btn-primary {
+  @apply relative inline-flex items-center gap-3 rounded-full px-7 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.25em] text-black transition;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 var(--accent), 0 0 40px -6px var(--accent);
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 0 0 4px rgba(255,255,255,0.08), 0 0 60px -4px var(--accent); }
+.btn-ghost {
+  @apply inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-white/80 transition hover:border-white/40 hover:text-white;
+}
+
+/* 3D object markers */
+.marker { display: flex; align-items: center; gap: 8px; cursor: pointer; background: none; border: 0; padding: 0; white-space: nowrap; }
+.marker-dot {
+  width: 14px; height: 14px; border-radius: 999px; background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.15), 0 0 18px var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+.marker.is-found .marker-dot { background: #fff; box-shadow: 0 0 0 4px rgba(255,255,255,0.1), 0 0 10px #fff; animation: none; }
+.marker-label {
+  font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: #fff; background: rgba(5,6,10,0.7); border: 1px solid rgba(255,255,255,0.12);
+  padding: 4px 8px; border-radius: 6px; opacity: 0; transform: translateX(-4px); transition: all .2s;
+  pointer-events: none;
+}
+.marker.is-hover .marker-label, .marker.is-selected .marker-label { opacity: 1; transform: none; }
+@keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.35); } }
+
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { scrollbar-width: none; }
+.grain::after {
+  content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: .06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
